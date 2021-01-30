@@ -1,4 +1,4 @@
-FROM us.gcr.io/artifacts-298104/base:v1
+FROM us.gcr.io/artifacts-298104/base:v2
 
 ARG ZEUS_VERSION="Zeus-1.6.jar"
 ENV CLASSPATH="/lib/${ZEUS_VERSION}"
