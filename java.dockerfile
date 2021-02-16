@@ -1,4 +1,4 @@
-FROM us.gcr.io/artifacts-298104/base:v4
+FROM us.gcr.io/artifacts-298104/base:v5
 
 ARG ZEUS_VERSION="Zeus-2.7.jar"
 
@@ -9,6 +9,7 @@ RUN dpkg -i ./zulu15.28.51-ca-jdk15.0.1-linux_amd64.deb
 RUN java --version
 ADD "https://storage.googleapis.com/zeus-artifacts/per-push-builds/${ZEUS_VERSION}" "/lib/${ZEUS_VERSION}"
 
+RUN apt update
 RUN apt install -y maven
 RUN apt install -y tree
 
