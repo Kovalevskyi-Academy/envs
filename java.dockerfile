@@ -1,6 +1,6 @@
 FROM us.gcr.io/artifacts-298104/base:v5
 
-ARG ZEUS_VERSION="Zeus-2.7.jar"
+ARG ZEUS_VERSION="Zeus-7.jar"
 
 RUN apt install -y java-common libxi6 libxrender1 libxtst6 libfontconfig1 libfreetype6 fontconfig-config
 RUN apt install wget
