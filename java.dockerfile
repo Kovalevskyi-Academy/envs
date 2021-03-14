@@ -1,4 +1,4 @@
-FROM us.gcr.io/artifacts-298104/base:v5
+FROM us.gcr.io/artifacts-298104/base:v6
 
 ARG ZEUS_VERSION="Zeus-19.jar"
 
