@@ -15,3 +15,4 @@ RUN apt install -y tree
 
 ENV M2_HOME="/usr/bin/"
 ENV CLASSPATH="/lib/${ZEUS_VERSION}"
+ENV JAVA_HOME=/usr/lib/jvm/zulu-15-amd64
