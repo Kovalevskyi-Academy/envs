@@ -1,4 +1,4 @@
-FROM us.gcr.io/artifacts-298104/base:v6
+FROM us.gcr.io/artifacts-298104/base:v7
 
 ARG ZEUS_VERSION="Zeus-22.jar"
 
@@ -22,4 +22,4 @@ ADD "https://storage.googleapis.com/zeus-artifacts/per-push-builds/${ZEUS_VERSIO
 
 ENV M2_HOME="/usr/bin/"
 ENV CLASSPATH="/lib/${ZEUS_VERSION}"
-ENV JAVA_HOME=/usr/lib/jvm/zulu-15-amd64
+ENV JAVA_HOME=/usr/lib/jvm/zulu-16-amd64
