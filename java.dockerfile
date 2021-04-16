@@ -20,6 +20,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 ADD "https://storage.googleapis.com/zeus-artifacts/per-push-builds/${ZEUS_VERSION}" "/lib/${ZEUS_VERSION}"
 
-ENV M2_HOME="/usr/bin/"
 ENV CLASSPATH="/lib/${ZEUS_VERSION}"
-ENV JAVA_HOME=/usr/lib/jvm/zulu-16-amd64
+
+# Setup environment variables required for Java to work 
+RUN echo '\
+export M2_HOME="/usr/bin/"\n\
+export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")' >> ~/.bashrc
