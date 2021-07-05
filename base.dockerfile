@@ -1,4 +1,4 @@
-FROM ubuntu:21.04
+FROM gcr.io/cloudshell-images/cloudshell:cloud-shell-v20210406-101205
 
 ARG DEBIAN_FRONTEND=noninteractive
 
