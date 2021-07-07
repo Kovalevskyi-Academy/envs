@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG="us.gcr.io/artifacts-298104/base:v8"
+TAG="us.gcr.io/artifacts-298104/base:v9"
 
 docker build --no-cache -f base.dockerfile -t "${TAG}" .
 docker push "${TAG}"
