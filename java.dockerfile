@@ -1,4 +1,4 @@
-FROM us.gcr.io/artifacts-298104/base:v7
+FROM us.gcr.io/artifacts-298104/base:a43d608
 
 ARG ZEUS_VERSION="Zeus-26.jar"
 
