@@ -1,6 +1,6 @@
 FROM us.gcr.io/artifacts-298104/base:1e695a4
 
-ARG ZEUS_VERSION="Zeus-26.jar"
+ARG ZEUS_VERSION="Zeus-27.jar"
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     java-common \
