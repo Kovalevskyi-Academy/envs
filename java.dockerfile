@@ -11,11 +11,11 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     wget \
     tree \
     maven \
-	jq \
+    jq \
     && rm -rf /var/lib/apt/lists/* \
     && wget https://raw.githubusercontent.com/Kovalevskyi-Academy/envs/master/autorun.sh \
-	&& chmod +x ./autorun.sh \
-	&& wget https://cdn.azul.com/zulu/bin/zulu16.28.11-ca-jdk16.0.0-linux_amd64.deb \
+    && chmod +x ./autorun.sh \
+    && wget https://cdn.azul.com/zulu/bin/zulu16.28.11-ca-jdk16.0.0-linux_amd64.deb \
     && dpkg -i ./zulu16.28.11-ca-jdk16.0.0-linux_amd64.deb \
     && java --version
 
