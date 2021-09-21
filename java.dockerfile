@@ -15,13 +15,16 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     && rm -rf /var/lib/apt/lists/* \
     && wget https://raw.githubusercontent.com/Kovalevskyi-Academy/envs/master/autorun.sh \
     && chmod +x ./autorun.sh \
-    && wget https://cdn.azul.com/zulu/bin/zulu16.28.11-ca-jdk16.0.0-linux_amd64.deb \
-    && dpkg -i ./zulu16.28.11-ca-jdk16.0.0-linux_amd64.deb \
-    && java --version
+    && wget https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz \
+    && tar xvf openjdk-17_linux-x64_bin.tar.gz \
+    && mv jdk-17 /opt/
+    && export JAVA_HOME=/opt/jdk-17
+    && export PATH=$PATH:$JAVA_HOME/bin 
+    && source ~/.bashrc
 
 # Setup environment variables required for Java to work 
 RUN echo '\
 export M2_HOME="/usr/bin/"\n\
-export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")' >> ~/.bashrc
+
 
 CMD /bin/bash -c './autorun.sh; /bin/bash'
