@@ -1,1 +1,1 @@
-gcloud cloud-shell ssh --command="wget -O .customize_environment http://bit.ly/cus_env && source .customize_environment"
+gcloud cloud-shell ssh --command="wget -O .customize_environment https://github.com/Kovalevskyi-Academy/envs/blob/master/google_cloud_shell/.customize_environment && source .customize_environment"
