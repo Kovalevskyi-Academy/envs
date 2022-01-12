@@ -26,17 +26,24 @@ git clone https://github.com/preservim/nerdcommenter.git ./.vim/pack/vendor/star
 git clone https://github.com/tpope/vim-fugitive.git ./.vim/pack/vendor/start/vim-fugitive.git
 git clone https://github.com/airblade/vim-gitgutter.git ./.vim/pack/vendor/start/vim-gitgutter.vim
 sudo cp ./.files/Zeus-${ZEUS_VERSION}.jar /lib
+sudo apt install libc6-x32 
+
+# clear & install java
 sudo update-alternatives --remove-all java
 sudo update-alternatives --remove-all javac
-sudo apt install libc6-x32                                                                                                                                                              
+sudo rm -rf /usr/lib/jvm
+sudo mkdir /usr/lib/jvm
 sudo dpkg -i ./.files/jdk-17_linux-x64_bin.deb                                                                                                                                          
 sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-17/bin/java 1
 sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-17/bin/javac 1
 # remove garbage
 sudo rm ./.files/jdk-17_linux-x64_bin.deb
+
 sudo apt install tree
 git config --global user.name "default_name default_name"
 git config --global user.email "default@example.com"
+
+# WRITE .vimrc
 cat <<EOF > ./.vimrc
 set noswapfile
 set nocompatible
@@ -47,9 +54,15 @@ colorscheme kuroi
 set nu
 set expandtab
 set softtabstop=2
+set backspace=2
+set t_Co=256
+set termencoding=utf-8
+set backspace=indent,eol,start whichwrap+=<,>,[,]
+set showtabline=1
 filetype plugin indent off
 au VimEnter *  NERDTree
 EOF
+# WRITE START
 cat <<EOF > ./.start
 #!/bin/bash
 clear
