@@ -36,6 +36,8 @@ sudo mkdir /usr/lib/jvm
 sudo dpkg -i ./.files/jdk-17_linux-x64_bin.deb                                                                                                                                          
 sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-17/bin/java 1
 sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-17/bin/javac 1
+# need to initialize JDK dependency
+mvn -v
 # remove garbage
 sudo rm ./.files/jdk-17_linux-x64_bin.deb
 
