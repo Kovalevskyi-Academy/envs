@@ -13,7 +13,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk-17
 export CLASSPATH=/lib/Zeus-\${ZEUS_VERSION}.jar
 export M2_HOME=/opt/maven
 export MAVEN_HOME=/opt/maven
-"
+
 grep -Fxq " delread" ./.bashrc || printf "$STR" >> ./.bashrc
 sed "/ZEUS_VERSION=/c ZEUS_VERSION=\"${ZEUS_VERSION}\"" ./.bashrc > ./temp && mv ./temp ./.bashrc
 mkdir -p ./.files
@@ -36,8 +36,7 @@ sudo mkdir /usr/lib/jvm
 sudo dpkg -i ./.files/jdk-17_linux-x64_bin.deb                                                                                                                                          
 sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-17/bin/java 1
 sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-17/bin/javac 1
-# need to initialize JDK dependency
-mvn -v
+
 # remove garbage
 sudo rm ./.files/jdk-17_linux-x64_bin.deb
 
