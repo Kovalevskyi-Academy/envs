@@ -43,6 +43,7 @@ sudo rm ./.files/jdk-17_linux-x64_bin.deb
 sudo apt install tree
 git config --global user.name "default_name default_name"
 git config --global user.email "default@example.com"
+git config --global core.editor "vim --nofork"
 
 # WRITE .vimrc
 cat <<EOF > ./.vimrc
