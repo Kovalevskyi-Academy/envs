@@ -13,7 +13,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk-17
 export CLASSPATH=/lib/Zeus-\${ZEUS_VERSION}.jar
 export M2_HOME=/opt/maven
 export MAVEN_HOME=/opt/maven
-
+"
 grep -Fxq " delread" ./.bashrc || printf "$STR" >> ./.bashrc
 sed "/ZEUS_VERSION=/c ZEUS_VERSION=\"${ZEUS_VERSION}\"" ./.bashrc > ./temp && mv ./temp ./.bashrc
 mkdir -p ./.files
