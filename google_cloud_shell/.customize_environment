@@ -29,7 +29,7 @@ sudo cp ./.files/Zeus-${ZEUS_VERSION}.jar /lib
 sudo apt install libc6-x32 
 
 # clear & install java
-sudo apt purge openjdk*
+sudo apt purge openjdk* --assume-yes
 sudo rm -rf /usr/lib/jvm
 sudo mkdir /usr/lib/jvm
 sudo dpkg -i ./.files/jdk-17_linux-x64_bin.deb                                                                                                                                          
