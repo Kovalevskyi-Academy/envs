@@ -9,6 +9,7 @@ alias l.='sudo ls -d .* --color=auto'
 alias tree='sudo tree'
 alias rm='sudo rm'
 alias zeus='java -jar \$CLASSPATH'
+alias whitespace="sed 's/ /·/g;s/\t/￫/g;s/\r\n/§/g;s/$/¶/g'"
 export JAVA_HOME=/usr/lib/jvm/jdk-17
 export CLASSPATH=/lib/Zeus-\${ZEUS_VERSION}.jar
 export M2_HOME=/opt/maven
