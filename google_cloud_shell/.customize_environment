@@ -43,7 +43,10 @@ sudo update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk-17/bin/
 # remove garbage
 sudo rm ./.files/jdk-17_linux-x64_bin.deb
 
-sudo apt install tree
+sudo apt install tree -q
+sudo apt update -y -q
+sudo apt upgrade -y -q
+sudo apt autoremove -y -q
 git config --global user.name "default_name default_name"
 git config --global user.email "default@example.com"
 git config --global core.editor "vim --nofork"
