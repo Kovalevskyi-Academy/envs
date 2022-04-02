@@ -1,4 +1,5 @@
-#!bin/bash
+#!/bin/bash
+
 ZEUS_VERSION="53"
 STR="ZEUS_VERSION=\"${ZEUS_VERSION}\"
 function delread() {\n rm README-cloudshell.txt && unalias help \n} \n delread\n
