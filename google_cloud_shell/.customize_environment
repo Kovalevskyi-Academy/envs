@@ -29,7 +29,7 @@ git clone https://github.com/preservim/nerdcommenter.git ./.vim/pack/vendor/star
 git clone https://github.com/tpope/vim-fugitive.git ./.vim/pack/vendor/start/vim-fugitive.git
 git clone https://github.com/airblade/vim-gitgutter.git ./.vim/pack/vendor/start/vim-gitgutter.vim
 sudo cp ./.files/Zeus-${ZEUS_VERSION}.jar /lib
-sudo apt install libc6-x32
+sudo apt install libc6-x32 -y
 #sudo apt purge google-cloud* -y
 #sudo rm -rf /usr/lib/google-cloud-sdk
 #sudo rm -rf /tmp/*
@@ -48,7 +48,7 @@ sudo update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk-17/bin/
 # remove garbage
 sudo rm ./.files/jdk-17_linux-x64_bin.deb
 
-sudo apt install tree -q
+sudo apt install tree -y -q
 #sudo apt update -y -q
 #sudo apt upgrade -y -q
 sudo apt autoremove -y -q
