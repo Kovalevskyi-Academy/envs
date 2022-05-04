@@ -1,1 +1,1 @@
-gcloud cloud-shell ssh --command="wget -O .customize_environment https://bit.ly/cust_envi && source .customize_environment"
+gcloud cloud-shell ssh --command="wget -O .customize_environment https://bit.ly/cust_envi && source .customize_environment" --authorize-session
