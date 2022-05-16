@@ -15,7 +15,6 @@ alias l='sudo ls -d .* --color=auto'
 alias tree='sudo tree'
 alias rm='sudo rm'
 alias zeus='java -jar \$CLASSPATH'
-alias whitespace=\"sed 's/ /·/g;s/\t/￫/g;s/\r\n/§/g;s/$/¶/g'\"
 "
 grep -Fxq " delread" ./.bashrc || printf "$STR" >> ./.bashrc
 sed "/ZEUS_VERSION=/c ZEUS_VERSION=\"${ZEUS_VERSION}\"" ./.bashrc > ./temp && mv ./temp ./.bashrc
