@@ -55,6 +55,7 @@ set t_Co=256
 set termencoding=utf-8
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 set showtabline=1
+set ruler
 filetype plugin indent off
 au VimEnter *  NERDTree
 EOF
