@@ -12,6 +12,7 @@ then
 else
 
   echo "modify the .bashrc"
+  printf "\nKovalevskyi Academy\n" >> ~/.bashrc
   echo "alias zeus='java -jar /lib/Zeus-${ZEUS_VERSION}.jar'" >> ~/.bashrc
   sed '/globstar/s/^#//g' -i ~/.bashrc
   echo "echo 'the .bashrc modification successful'" >> ~/.bashrc
@@ -66,7 +67,8 @@ EOF
   echo "prepare java"
   sudo rm /usr/lib/jvm/default-java ; sudo ln -srv /usr/lib/jvm/java-1.17* /usr/lib/jvm/default-java
   echo 'JAVA_HOME=/usr/lib/jvm/default-java' | sudo tee -a /etc/environment
-  source /etc/environment
+  echo "export JAVA_HOME=/usr/lib/jvm/default-java" >> ~/.bashrc
+  echo "export JAVA_HOME=/usr/lib/jvm/default-java" >> ~/.profile
   echo "finish java preparing"
 
   echo "set git preferences"
